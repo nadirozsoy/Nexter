@@ -49,6 +49,21 @@ body {
   line-height: 1.6;
 }
 
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+.heading-4--light {
+  color: #f9f7f6;
+}
+.heading-4--dark {
+  color: #54483a;
+}
+
 .d-flex {
   display: flex;
 }
@@ -61,19 +76,40 @@ body {
   position: relative;
 }
 
+.align-center {
+  align-items: center;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2rem;
+}
+.feature__text {
+  grid-area: 2/2/3/3;
+  font-size: 1.7rem;
+}
+.feature__icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  fill: #c69963;
+  transform: translateY(-1rem);
+}
+
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
-.container > * {
-  padding: 4rem;
-  font-size: 3rem;
-  text-align: center;
-}
 
 .features {
+  display: grid;
   grid-area: 2/center-start/3/center-end;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 6rem;
+  margin: 15rem 0;
+  align-items: start;
 }
 
 .gallery {
