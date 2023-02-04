@@ -1,0 +1,21 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: $color-primary;
+  padding: 2rem 3rem;
+  font-family: $font-display;
+  text-transform: uppercase;
+  border-radius: $radius-1;
+  transition: $transition-1;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    box-shadow: $shadow-1;
+  }
+
+  &:active {
+    transform: scale(1.02);
+  }
+}

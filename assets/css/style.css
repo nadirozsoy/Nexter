@@ -54,6 +54,24 @@ body {
   font-weight: 400;
 }
 
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+}
+.heading-2--light {
+  color: #f9f7f6;
+}
+.heading-2--dark {
+  color: #54483a;
+}
+
+.heading-3 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #c69963;
+}
+
 .heading-4 {
   font-size: 1.9rem;
 }
@@ -64,20 +82,20 @@ body {
   color: #54483a;
 }
 
-.d-flex {
-  display: flex;
+.mb-sm {
+  margin-bottom: 2rem;
 }
 
-.position-absolute {
-  position: absolute;
+.mb-md {
+  margin-bottom: 3rem;
 }
 
-.position-relative {
-  position: relative;
+.mb-lg {
+  margin-bottom: 4rem;
 }
 
-.align-center {
-  align-items: center;
+.mb-xl {
+  margin-bottom: 8rem;
 }
 
 .feature {
@@ -95,6 +113,26 @@ body {
   height: 4.5rem;
   fill: #c69963;
   transform: translateY(-1rem);
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #c69963;
+  padding: 2rem 3rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: #b28451;
+  box-shadow: 0 0 1.3rem rgba(0, 0, 0, 0.6);
+}
+.btn:active {
+  transform: scale(1.02);
 }
 
 .container {
@@ -136,12 +174,36 @@ body {
 }
 
 .story__pictures {
-  background-color: #c69963;
+  background-image: linear-gradient(to right bottom, rgba(198, 153, 99, 0.3), rgba(178, 132, 81, 0.6)), url("/assets/img/back.jpg");
+  background-size: cover;
   grid-area: 3/full-start/4/col-end 4;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+}
+.story__img--1 {
+  width: 100%;
+  grid-area: 2/2/6/6;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+.story__img--2 {
+  width: 110%;
+  grid-area: 4/4/7/7;
+  z-index: 10;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 .story__content {
   background-color: #f9f7f6;
   grid-area: 3/col-start 5/4/full-end;
+  padding: 6rem 8vw;
+  display: grid;
+  justify-items: start;
+  align-content: center;
+}
+.story__text {
+  font-size: 1.5rem;
+  font-style: italic;
 }
 
 .footer {
