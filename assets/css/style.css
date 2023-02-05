@@ -318,7 +318,44 @@ body {
 }
 
 .footer {
+  background-color: #101d2c;
   grid-area: 6/full-start/7/full-end;
+  padding: 8rem;
+  text-align: center;
+}
+.footer__nav {
+  list-style: none;
+  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5rem;
+  align-items: center;
+  justify-items: center;
+}
+.footer__item {
+  display: inline-block;
+}
+.footer__link:link, .footer__link:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+}
+.footer__link:hover, .footer__link:active {
+  transform: rotate(-10deg) translateY(-3px) scale(1.2);
+}
+.footer__copyright {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.4rem;
+  border-top: 1px solid #f9f7f6;
+  padding-top: 2rem;
+  color: #aaa;
+  margin-top: 6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
