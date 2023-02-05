@@ -1,8 +1,13 @@
 .footer {
   background-color: $color-secondary;
-  grid-area: 6 / full-start/7/full-end;
+  // grid-area: 6 / full-start/7/full-end;
+  grid-column: full-start/full-end;
   padding: 8rem;
   text-align: center;
+
+  @media only screen and (max-width: $bp-sm-1) {
+    padding: 6rem;
+  }
 
   &__nav {
     list-style: none;
@@ -45,5 +50,13 @@
     padding-top: 2rem;
     color: $color-grey-light-2;
     margin-top: 6rem;
+
+    @media only screen and (max-width: $bp-lg-2) {
+      width: 60%;
+    }
+
+    @media only screen and (max-width: $bp-sm-1) {
+      width: 80%;
+    }
   }
 }

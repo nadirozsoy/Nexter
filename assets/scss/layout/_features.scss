@@ -1,9 +1,17 @@
 .features {
   display: grid;
-  grid-area: 2 / center-start/3 / center-end;
+  grid-column: center-start/ center-end;
   // grid-template-rows: repeat(2, min-content);
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 6rem;
   margin: 15rem 0;
   align-items: start;
+
+  @media only screen and (max-width: $bp-sm-1) {
+    margin: 8rem 0;
+  }
+
+  @media only screen and (max-width: $bp-sm-1) {
+    margin: 6rem 0;
+  }
 }
